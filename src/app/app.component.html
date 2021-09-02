@@ -1,0 +1,12 @@
+<h1 class = "text-success text-center">CalorieTracker App</h1>
+<div class="container">
+  <div class = "row">
+    
+      <ul class = "list-group col-md-4" *ngFor = "let meal of mealDetails;let m = index">
+      <li class = "list-group-item bg-success text-white">{{meal.name}} <span>({{meal.consumed}}/{{meal.limit}})</span></li>  
+      <li class = "list-group-item text-success" *ngFor = "let item of meal.list;let i = index" (click) = "selectedItem(m,item,i)">
+        {{item.name}} ({{item.cal}}) 
+      </li>
+      </ul>
+    </div>
+</div>
